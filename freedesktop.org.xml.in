@@ -1909,6 +1909,12 @@ command to generate the output files.
     <generic-icon name="application-x-executable"/>
     <glob pattern="*.gba"/>
   </mime-type>
+  <mime-type type="application/x-gbc-rom">
+    <_comment>Game Boy Color ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.gbc"/>
+	<sub-class-of type="application/x-gameboy-rom"/>
+  </mime-type>
   <mime-type type="application/x-gdbm">
     <_comment>GDBM database</_comment>
     <acronym>GDBM</acronym>
