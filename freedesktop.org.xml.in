@@ -1931,8 +1931,6 @@ command to generate the output files.
     </magic>
   </mime-type>
   <mime-type type="application/x-genesis-rom">
-    <!-- Translate this to Megadrive if the console was known as such in your locale
-         Should be Megadrive in all but en_US: http://en.wikipedia.org/wiki/Megadrive#History -->
     <_comment>Genesis ROM</_comment>
     <generic-icon name="application-x-executable"/>
     <magic priority="50">
@@ -1940,6 +1938,15 @@ command to generate the output files.
     </magic>
     <glob pattern="*.gen"/>
     <glob pattern="*.bin"/>
+  </mime-type>
+  <mime-type type="application/x-megadrive-rom">
+    <_comment>Megadrive ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <magic priority="50">
+      <match type="string" value="SEGA MEGA DRIVE " offset="256"/>
+    </magic>
+    <glob pattern="*.md"/>
+    <glob pattern="*.smd"/>
   </mime-type>
   <mime-type type="application/x-gettext-translation">
     <_comment>translated messages (machine-readable)</_comment>
