@@ -1677,6 +1677,11 @@ command to generate the output files.
     </magic>
     <root-XML namespaceURI="http://www.daa.com.au/~james/dia-shape-ns" localName="shape"/>
   </mime-type>
+  <mime-type type="application/x-doom">
+    <_comment>Doom WAD</_comment>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.wad"/>
+  </mime-type>
   <mime-type type="application/x-dvi">
     <_comment>TeX DVI document</_comment>
     <acronym>DVI</acronym>
