@@ -1913,6 +1913,9 @@ command to generate the output files.
     <_comment>Game Boy Advance ROM</_comment>
     <generic-icon name="application-x-executable"/>
     <glob pattern="*.gba"/>
+    <magic priority="50">
+      <match type="string" value="\x24\xFF\xAE\x51\x69\x9A\xA2\x21\x3D\x84\x82\x0A" offset="4"/>
+    </magic>
   </mime-type>
   <mime-type type="application/x-gbc-rom">
     <_comment>Game Boy Color ROM</_comment>
