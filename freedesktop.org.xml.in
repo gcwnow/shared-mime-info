@@ -2587,6 +2587,10 @@ command to generate the output files.
     <_comment>MSX ROM</_comment>
     <generic-icon name="application-x-executable"/>
     <glob pattern="*.msx"/>
+    <glob pattern="*.rom"/>
+    <magic priority="50">
+      <match type="string" value="AB" offset="0"/>
+    </magic>
   </mime-type>
   <mime-type type="application/x-m4">
     <_comment>M4 macro</_comment>
