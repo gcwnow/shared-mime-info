@@ -1901,6 +1901,12 @@ command to generate the output files.
       <match type="string" value="&lt;Maker" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="application/x-lynx-rom">
+    <_comment>Atari Lynx ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.lyx"/>
+    <glob pattern="*.lnx"/>
+  </mime-type>
   <mime-type type="application/x-gameboy-rom">
     <_comment>Game Boy ROM</_comment>
     <generic-icon name="application-x-executable"/>
