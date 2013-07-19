@@ -6142,4 +6142,23 @@ command to generate the output files.
     <glob pattern="*.trig" />
   </mime-type>
 
+  <mime-type type="application/usp-zx-snapshot">
+    <_comment>ZX Spectrum ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.sna"/>
+    <glob pattern="*.z80"/>
+  </mime-type>
+  <mime-type type="application/usp-zx-disk">
+    <_comment>ZX Spectrum ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.scl"/>
+    <glob pattern="*.trd"/>
+  </mime-type>
+  <mime-type type="application/usp-zx-tape">
+    <_comment>ZX Spectrum ROM</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.tap"/>
+    <glob pattern="*.tzx"/>
+    <glob pattern="*.csw"/>
+  </mime-type>
 </mime-info>
