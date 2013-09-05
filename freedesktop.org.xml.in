@@ -93,6 +93,7 @@ command to generate the output files.
       <match type="string" value="PK\003\004" offset="0">
         <match type="string" value="mimetype" offset="30">
           <match type="string" value="application/epub+zip" offset="38"/>
+          <match type="string" value="application/epub+zip" offset="43"/>
         </match>
       </match>
     </magic>
@@ -257,6 +258,8 @@ command to generate the output files.
     <glob pattern="*.skr"/>
     <glob pattern="*.pkr"/>
     <glob pattern="*.asc"/>
+    <glob pattern="*.pgp"/>
+    <glob pattern="*.gpg"/>
   </mime-type>
   <mime-type type="application/pgp-signature">
     <_comment>detached OpenPGP signature</_comment>
@@ -266,6 +269,10 @@ command to generate the output files.
       <match type="string" value="-----BEGIN PGP SIGNED MESSAGE-----" offset="0"/>
       <match type="string" value="-----BEGIN PGP SIGNATURE-----" offset="0"/>
     </magic>
+    <glob pattern="*.asc"/>
+    <glob pattern="*.sig"/>
+    <glob pattern="*.pgp"/>
+    <glob pattern="*.gpg"/>
   </mime-type>
   <!-- defined in RFC 2311 -->
   <mime-type type="application/pkcs7-mime">
@@ -1474,8 +1481,20 @@ command to generate the output files.
     <_comment>Apple disk image</_comment>
     <glob pattern="*.dmg"/>
   </mime-type>
+  <mime-type type="application/x-raw-disk-image">
+     <_comment>Raw disk image</_comment>
+     <glob pattern="*.raw-disk-image"/>
+     <glob pattern="*.img"/>
+   </mime-type>
+   <mime-type type="application/x-raw-disk-image-xz-compressed">
+     <_comment>Raw disk image (XZ-compressed)</_comment>
+     <sub-class-of type="application/x-xz"/>
+     <glob pattern="*.raw-disk-image.xz"/>
+     <glob pattern="*.img.xz"/>
+   </mime-type>
   <mime-type type="application/x-cd-image">
     <_comment>raw CD image</_comment>
+    <sub-class-of type="application/x-raw-disk-image"/>
     <alias type="application/x-iso9660-image"/>
     <glob pattern="*.iso"/>
     <glob pattern="*.iso9660"/>
@@ -2481,6 +2500,11 @@ command to generate the output files.
   <mime-type type="video/x-matroska">
     <_comment>Matroska video</_comment>
     <glob pattern="*.mkv"/>
+    <sub-class-of type="application/x-matroska"/>
+  </mime-type>
+  <mime-type type="video/x-matroska-3d">
+    <_comment>Matroska 3D video</_comment>
+    <glob pattern="*.mk3d"/>
     <sub-class-of type="application/x-matroska"/>
   </mime-type>
   <mime-type type="audio/x-matroska">
@@ -6093,6 +6117,9 @@ command to generate the output files.
   <mime-type type="x-content/ebook-reader">
     <!-- see fd.o hal spec -->
     <_comment>e-book reader</_comment>
+    <treemagic>
+      <treematch path=".kobo" type="directory" non-empty="true"/>
+    </treemagic>
   </mime-type>
 
   <mime-type type="x-content/image-picturecd">

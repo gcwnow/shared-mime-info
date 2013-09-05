@@ -369,6 +369,13 @@ xml-in-mp3.mp3 audio/mpeg
 # http://samples.mplayerhq.hu/A-codecs/AAC/ct_faac-adts.aac
 ct_faac-adts.aac audio/aac
 
+# Disk and CD/DVD images
+iso-file.iso application/x-cd-image oxo
+disk.img application/x-raw-disk-image oxo
+disk.img.xz application/x-raw-disk-image-xz-compressed oxo
+disk.raw-disk-image application/x-raw-disk-image oxo
+disk.raw-disk-image.xz application/x-raw-disk-image-xz-compressed oxo
+
 # Video game ROMs
 genesis1.bin application/x-genesis-rom xox
 genesis2.bin application/x-genesis-rom xox
@@ -427,3 +434,10 @@ LiberationSans-Regular.ttf application/x-font-ttf
 # Converted from LiberationSans-Regular.ttf with http://ttf2woff.com/
 LiberationSans-Regular.woff application/font-woff
 nrl.trig application/x-trig oxo
+
+COPYING-encrypted.asc application/pgp-encrypted ooo
+COPYING-clearsign.asc application/pgp-signature xoo
+COPYING.asc application/pgp-signature xoo
+test-public-key.asc application/pgp-keys xoo
+test-secret-key.skr application/pgp-keys ooo
+test-secret-key.asc application/pgp-keys xoo
