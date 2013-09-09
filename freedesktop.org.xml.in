@@ -2598,6 +2598,16 @@ command to generate the output files.
     </magic>
     <glob pattern="*.exe"/>
   </mime-type>
+  <mime-type type="application/x-ms-dos-batch">
+    <_comment>DOS/Windows batch script</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.bat"/>
+  </mime-type>
+  <mime-type type="application/x-ms-dos-program">
+    <_comment>DOS executable</_comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.com"/>
+  </mime-type>
   <mime-type type="application/x-mswinurl">
     <_comment>Internet shortcut</_comment>
     <magic priority="50">
